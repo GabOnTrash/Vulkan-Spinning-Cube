@@ -1,32 +1,85 @@
-# Prerequisites
-*.d
+# Visual Studio build files
+.vs/
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# Build results
+Debug/
+Release/
+x64/
+x86/
+build/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app
+*.dll
+*.lib
+*.pdb
+*.ipch
+*.iobj
+*.idb
+*.tlog
+*.log
+*.pch
+*.sbr
+*.sdf
+*.opensdf
+*.cache
+*.db
+*.VC.db
+*.VC.VC.opendb
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CMakeScripts/
+
+# vcpkg
+vcpkg_installed/
+vcpkg_buildtrees/
+vcpkg_packages/
+CMakeSettings.json
+
+# Shaders (compiled)
+*.spv
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Crash dumps
+*.dmp
+
+# Others
+*.tlog/
+*.lastbuildstate
+*.VC.db
+*.VC.opendb
+
+# Visual Studio Code
+.vscode/
+
+# Qt Creator
+*.pro.user
+*.qmake.stash
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# Ignore by extension
+*.swp
+*.swo
+
+# Ignore test output
+test_output/
