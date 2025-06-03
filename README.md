@@ -1,6 +1,8 @@
 # Vulkan-Spinning-Cube
 
-This project is a minimal C++20 application that demonstrates how to render a rotating 3D cube using the Vulkan graphics API. It is designed for educational purposes and as a starting point for more complex Vulkan-based applications.
+This project is a minimal C++20 application that demonstrates how to render a rotating 3D cube using the Vulkan graphics API. It is designed for educational purposes and as a starting point for more complex Vulkan-based applications. It needs some more bug corrections, caused by the incorrect handle of the `fences` and `semaphores`. It still runs, but it might crush as i said earlier.
+
+
 
 ---
 
