@@ -26,7 +26,7 @@ This project is a minimal C++20 application that demonstrates how to render a ro
 
 ---
 
-## Building with VCPKG
+## Building with Vcpkg
 
 ### 1. Install Dependencies
 
