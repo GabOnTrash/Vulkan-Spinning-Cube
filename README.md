@@ -26,11 +26,11 @@ This project is a minimal C++20 application that demonstrates how to render a ro
 
 ---
 
-## Building
+## Building with VCPKG
 
 ### 1. Install Dependencies
 
-It is recommended to use [vcpkg](https://github.com/microsoft/vcpkg):
+It is recommended to use [vcpkg](https://github.com/microsoft/vcpkg): vcpkg install glfw3 glm
 
 Make sure the Vulkan SDK is installed and its `Bin` and `Lib` folders are in your system `PATH`.
 
@@ -49,12 +49,47 @@ Make sure the Vulkan SDK is installed and its `Bin` and `Lib` folders are in you
 
 - Build the solution (`Ctrl+Shift+B`).
 
+## Building with Premake (Lua)
+
+This project supports building with [Premake5](https://premake.github.io/), which uses a `premake5.lua` script to generate project files for Visual Studio or other build systems.
+
+### 1. Install Premake
+
+Download the latest Premake5 binary from [https://premake.github.io/download.html](https://premake.github.io/download.html) and add it to your system `PATH`.
+
+### 2. Generate Project Files
+
+Open a terminal in the project root and run: premake5 vs2022
+
+This will generate a Visual Studio 2022 solution (`.sln`) and project files.
+
+You can also generate files for other IDEs or build systems (see `premake5 --help`).
+
+### 3. Build the Project
+
+- Open the generated `.sln` file in Visual Studio 2022.
+- Build as usual (`Ctrl+Shift+B`).
+
+### 4. Shaders Directory
+
+The `premake5.lua` script is configured to include the `shaders` directory. All shader files (e.g., `.spv`) will be available in the project and can be copied to the output directory as needed.
+
+### 5. Dependencies
+
+Make sure you have installed all required dependencies (Vulkan SDK, GLFW, GLM). You can use [vcpkg](https://github.com/microsoft/vcpkg) or configure the include/lib directories manually.
+
+---
+
+**Note:**  
+If you add or remove source files or shaders, re-run `premake5` to update the project files.
+
+
 ---
 
 ## Running
 
 - Run the application (`F5` or `Ctrl+F5`).
-- A window titled **"Vulkan Triangle"** will appear, displaying a rotating 3D cube.
+- A window titled **"Vulkan Spinning Cube"** will appear, displaying a rotating 3D cube.
 
 ---
 
@@ -73,8 +108,7 @@ The application expects precompiled SPIR-V shaders at:
 - `shaders/basic.vert.spv`
 - `shaders/basic.frag.spv`
 
-You can compile GLSL shaders using `glslangValidator` from the Vulkan SDK:
-
+You can compile GLSL shaders using the batch file found in the directory *shaders* or you can can use `glslangValidator` from the Vulkan SDK: glslangValidator -V basic.vert -o basic.vert.spv glslangValidator -V basic.frag -o basic.frag.spv
 
 ---
 
