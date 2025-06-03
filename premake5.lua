@@ -12,18 +12,15 @@ project "Vulkan"
 
     -- Source files
     files {
-        "Vulkan/**.h",
-        "Vulkan/**.cpp",
+        "src/**.h",
+        "src/**.cpp",
         "shaders/**"
     }
 
     -- Include directories
     includedirs {
-        "Vulkan",
-        -- Add paths to GLFW, GLM, Vulkan SDK as needed, e.g.:
-        -- "$(VULKAN_SDK)/Include",
-        -- "path/to/glfw/include",
-        -- "path/to/glm"
+        "src",
+        "shaders"
     }
 
     -- Library directories
@@ -32,10 +29,15 @@ project "Vulkan"
         -- "path/to/glfw/lib"
     }
 
+    postbuildcommands {
+    '{COPYDIR} "%{prj.location}/shaders" "%{cfg.targetdir}/shaders"'
+    }
+
     -- Link libraries
     links {
         "vulkan-1",
-        "glfw3"
+        "glfw3dll",
+        "glm"
         -- Add other libraries if needed
     }
 
