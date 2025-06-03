@@ -14,6 +14,22 @@ This project is a minimal C++20 application that demonstrates how to render a ro
 - **Rotating Cube**: Renders a colored, indexed 3D cube with basic camera and transformation logic.
 - **Validation Layers**: Optional Vulkan validation for debugging and learning.
 
+<!-- C++ -->
+![C++](https://img.shields.io/badge/C++-00599C?logo=c%2b%2b&logoColor=white)
+
+<!-- Windows -->
+![Windows](https://img.shields.io/badge/Windows-00ADEF?logo=windows&logoColor=white)
+
+<!-- GLFW -->
+![GLFW](https://img.shields.io/badge/GLFW-F26F21?logo=glfw&logoColor=white)
+
+<!-- GLM -->
+![GLM](https://img.shields.io/badge/GLM-7FDB96?logo=glm&logoColor=black)
+
+<!-- Vulkan -->
+![Vulkan](https://img.shields.io/badge/Vulkan-AC1B1B?logo=vulkan&logoColor=white)
+
+
 ---
 
 ## Prerequisites
